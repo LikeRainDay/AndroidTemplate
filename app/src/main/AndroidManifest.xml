@@ -1,11 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="app.web.drjackycv.mvvmtemplate">
+    package="app.web.finecloud.mvvmtemplate">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".application.MVVMTemplateApplication"
+        android:name="app.web.finecloud.mvvmtemplate.application.MVVMTemplateApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme"
         tools:targetApi="n">
 
-        <activity android:name="app.web.drjackycv.presentation.main.MainActivity">
+        <activity android:name="app.web.finecloud.presentation.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         app:defaultNavHost="true"
         app:navGraph="@navigation/main_navigation"
-        tools:context="app.web.drjackycv.presentation.main.MainActivity"
+        tools:context="app.web.finecloud.presentation.main.MainActivity"
         tools:layout="@layout/fragment_choose" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

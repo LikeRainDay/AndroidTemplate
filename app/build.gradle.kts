@@ -1,4 +1,4 @@
-import app.web.drjackycv.buildsrc.Depends
+import app.web.finecloud.buildsrc.Depends
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -10,17 +10,17 @@ plugins {
 }
 
 android {
-    compileSdkVersion(Depends.Versions.androidCompileSdkVersion)
+    compileSdkVersion(app.web.finecloud.buildsrc.Depends.Versions.androidCompileSdkVersion)
 
     defaultConfig {
         multiDexEnabled = true
-        applicationId = "app.web.drjackycv.mvvmtemplate"
-        minSdkVersion(Depends.Versions.minSdkVersion)
-        targetSdkVersion(Depends.Versions.targetSdkVersion)
-        versionCode = Depends.Versions.appVersionCode
-        versionName = Depends.generateVersionName()
+        applicationId = "app.web.finecloud.mvvmtemplate"
+        minSdkVersion(app.web.finecloud.buildsrc.Depends.Versions.minSdkVersion)
+        targetSdkVersion(app.web.finecloud.buildsrc.Depends.Versions.targetSdkVersion)
+        versionCode = app.web.finecloud.buildsrc.Depends.Versions.appVersionCode
+        versionName = app.web.finecloud.buildsrc.Depends.generateVersionName()
         testInstrumentationRunner =
-            Depends.Versions.testInstrumentationRunner
+            app.web.finecloud.buildsrc.Depends.Versions.testInstrumentationRunner
         javaCompileOptions.annotationProcessorOptions.arguments += mapOf(
             "room.schemaLocation" to "$projectDir/schemas"
         )
@@ -75,32 +75,32 @@ tasks.withType<KotlinCompile> {
 }
 
 dependencies {
-    implementation(Depends.Libraries.kotlin)
-    implementation(Depends.Libraries.android_core_ktx)
-    implementation(Depends.Libraries.multidex)
-    implementation(Depends.Libraries.fragment_ktx)
-    implementation(Depends.Libraries.paging_runtime_ktx)
-    implementation(Depends.Libraries.paging_rx)
-    implementation(Depends.Libraries.dataStore_preferences)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.kotlin)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.android_core_ktx)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.multidex)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.fragment_ktx)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.paging_runtime_ktx)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.paging_rx)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.dataStore_preferences)
     //dependency injection
-    implementation(Depends.Libraries.hilt_android)
-    kapt(Depends.Libraries.hilt_android_compiler)
-    kapt(Depends.Libraries.hilt_compiler)
-    implementation(Depends.Libraries.java_inject)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.hilt_android)
+    kapt(app.web.finecloud.buildsrc.Depends.Libraries.hilt_android_compiler)
+    kapt(app.web.finecloud.buildsrc.Depends.Libraries.hilt_compiler)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.java_inject)
     //network
-    implementation(Depends.Libraries.retrofit)
-    implementation(Depends.Libraries.retrofit_adapter_rx)
-    implementation(Depends.Libraries.logging_interceptor)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.retrofit)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.retrofit_adapter_rx)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.logging_interceptor)
     //other
-    implementation(Depends.Libraries.timber)
-    implementation(Depends.Libraries.material)
-    debugImplementation(Depends.Libraries.leak_canary)
-    debugImplementation(Depends.Libraries.chucker)
-    releaseImplementation(Depends.Libraries.chucker_no_op)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.timber)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.material)
+    debugImplementation(app.web.finecloud.buildsrc.Depends.Libraries.leak_canary)
+    debugImplementation(app.web.finecloud.buildsrc.Depends.Libraries.chucker)
+    releaseImplementation(app.web.finecloud.buildsrc.Depends.Libraries.chucker_no_op)
     //test
-    testImplementation(Depends.Libraries.junit)
-    androidTestImplementation(Depends.Libraries.test_runner)
-    androidTestImplementation(Depends.Libraries.espresso_core)
+    testImplementation(app.web.finecloud.buildsrc.Depends.Libraries.junit)
+    androidTestImplementation(app.web.finecloud.buildsrc.Depends.Libraries.test_runner)
+    androidTestImplementation(app.web.finecloud.buildsrc.Depends.Libraries.espresso_core)
 
     implementation(project(":presentation"))
     implementation(project(":data"))

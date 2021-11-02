@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/chooseFragment"
-        android:name="app.web.drjackycv.presentation.products.choose.ChooseFragment"
+        android:name="app.web.finecloud.presentation.products.choose.ChooseFragment"
         tools:layout="@layout/fragment_choose">
 
         <action
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/productsListFragment"
-        android:name="app.web.drjackycv.presentation.products.productlist.ProductsListFragment"
+        android:name="app.web.finecloud.presentation.products.productlist.ProductsListFragment"
         tools:layout="@layout/fragment_product_list">
 
         <action
@@ -28,18 +28,18 @@
         <argument
             android:name="choosePathType"
             android:defaultValue="RX"
-            app:argType="app.web.drjackycv.presentation.products.choose.ChoosePathType" />
+            app:argType="app.web.finecloud.presentation.products.choose.ChoosePathType" />
 
     </fragment>
 
     <fragment
         android:id="@+id/productDetailFragment"
-        android:name="app.web.drjackycv.presentation.products.productdetail.ProductDetailFragment"
+        android:name="app.web.finecloud.presentation.products.productdetail.ProductDetailFragment"
         tools:layout="@layout/fragment_product_detail">
 
         <argument
             android:name="productDetailBeerUI"
-            app:argType="app.web.drjackycv.presentation.products.entity.BeerUI" />
+            app:argType="app.web.finecloud.presentation.products.entity.BeerUI" />
 
     </fragment>
 

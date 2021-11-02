@@ -1,4 +1,4 @@
-rootProject.name = 'MVVMTemplate'
+rootProject.name = 'AndroidTemplate'
 include ':app'
 include ':domain'
 include ':data'

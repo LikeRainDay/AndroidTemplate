@@ -1,4 +1,4 @@
-import app.web.drjackycv.buildsrc.Depends
+import app.web.finecloud.buildsrc.Depends
 
 plugins {
     id("com.android.library")
@@ -9,14 +9,14 @@ plugins {
 
 android {
 
-    compileSdkVersion(Depends.Versions.androidCompileSdkVersion)
+    compileSdkVersion(app.web.finecloud.buildsrc.Depends.Versions.androidCompileSdkVersion)
 
     defaultConfig {
         multiDexEnabled = true
-        minSdkVersion(Depends.Versions.minSdkVersion)
-        targetSdkVersion(Depends.Versions.targetSdkVersion)
+        minSdkVersion(app.web.finecloud.buildsrc.Depends.Versions.minSdkVersion)
+        targetSdkVersion(app.web.finecloud.buildsrc.Depends.Versions.targetSdkVersion)
         testInstrumentationRunner =
-            Depends.Versions.testInstrumentationRunner
+            app.web.finecloud.buildsrc.Depends.Versions.testInstrumentationRunner
         consumerProguardFiles("consumer-rules.pro")
     }
     compileOptions {
@@ -50,20 +50,20 @@ configurations["compileOnly"].extendsFrom(unitTestImplementation)
 configurations["testImplementation"].extendsFrom(unitTestImplementation)
 
 dependencies {
-    implementation(Depends.Libraries.kotlin)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.kotlin)
     //android
-    implementation(Depends.Libraries.paging_runtime_ktx)
-    implementation(Depends.Libraries.paging_rx)
-    implementation(Depends.Libraries.lifecycle_livedata)
-    implementation(Depends.Libraries.multidex)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.paging_runtime_ktx)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.paging_rx)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.lifecycle_livedata)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.multidex)
     //reactive
-    implementation(Depends.Libraries.rx_kotlin)
-    implementation(Depends.Libraries.rx_java)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.rx_kotlin)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.rx_java)
     //dependency injection
-    implementation(Depends.Libraries.java_inject)
+    implementation(app.web.finecloud.buildsrc.Depends.Libraries.java_inject)
     //test
-    testImplementation(Depends.Libraries.junit)
-    testImplementation(Depends.Libraries.mockito_core)
-    testImplementation(Depends.Libraries.mockito_inline)
-    testImplementation(Depends.Libraries.mockito_kotlin)
+    testImplementation(app.web.finecloud.buildsrc.Depends.Libraries.junit)
+    testImplementation(app.web.finecloud.buildsrc.Depends.Libraries.mockito_core)
+    testImplementation(app.web.finecloud.buildsrc.Depends.Libraries.mockito_inline)
+    testImplementation(app.web.finecloud.buildsrc.Depends.Libraries.mockito_kotlin)
 }
